@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* Primary colors*/
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral colors*/
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturate-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  background-color: var(--pale-blue);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.bg-image {
+  background: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.container {
+  background-color: hsl(0, 0%, 100%);
+  margin: 1.5rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px rgba(31, 47, 86, 0.2);
+  padding-bottom: 1.2rem;
+}
+.container .hero {
+  width: 100%;
+}
+h1 {
+  color: var(--dark-blue);
+  margin: 0.5rem 0;
+}
+.description {
+  text-align: center;
+  padding: 0 2rem;
+}
+h4 {
+  color: var(--dark-blue);
+}
+p {
+  color: var(--desaturate-blue);
+  line-height: 1.5;
+}
+.pricing-plan {
+  margin: 2rem auto;
+  padding: 0.7rem;
+  background-color: var(--very-pale-blue);
+  width: 90%;
+  border-radius: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  border: 1px solid transparent;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+a {
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+.proceed-btn {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  margin-bottom: 0.5rem;
+}
+.proceed-btn:hover {
+  opacity: 0.8;
+}
+.cancel-btn {
+  background-color: transparent;
+  color: var(--desaturate-blue);
+}
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+@media (min-width: 768px) {
+  .bg-image {
+    background: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+  }
+  .container {
+    max-width: 28rem;
+  }
+}
