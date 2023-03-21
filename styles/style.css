@@ -24,7 +24,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 .bg-image {
   background: url(/images/pattern-background-mobile.svg);
